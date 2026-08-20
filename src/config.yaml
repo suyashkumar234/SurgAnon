@@ -1,0 +1,8 @@
+data:
+  frames_dir: "/path/to/frames_5fps"   # base dir where extracted frames are stored at 5 fps
+  fps: 5
+  train_videos: []                      # list of video names used for training
+  test_videos: []                       # list of video names used for evaluation
+
+step1:
+  output_dir: "/path/to/labels"        # where label CSVs are stored (one per video)

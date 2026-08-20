@@ -1,0 +1,18 @@
+# System dependency (install separately):
+#   ffmpeg  — required by src/frame_extractor.py for video frame extraction
+
+# Install surgvlp from source:
+#   pip install git+https://github.com/camma-public/surgvlp
+surgvlp
+
+torch>=2.1.0
+torchvision>=0.16.0
+timm>=0.9.12
+transformers>=4.40.0
+huggingface-hub>=0.20.0
+pillow>=10.0.0
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+pyyaml>=6.0
+tqdm>=4.65.0
