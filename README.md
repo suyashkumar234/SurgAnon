@@ -339,6 +339,34 @@ FP/FN = total spurious/missed OoB segments across 12 test videos (post-smoothing
 
 ---
 
+## Pretrained Weights
+
+The best-performing **GatedTextFusion LSTM** checkpoint (F1_smooth = 0.9849, AP = 0.9956) is available on HuggingFace:
+
+```python
+from huggingface_hub import hf_hub_download
+
+path = hf_hub_download(
+    repo_id="suyashkumar234/SurgAnon",
+    filename="best_gated_lstm_weights.pt"
+)
+```
+
+Then load into the model:
+
+```python
+import torch
+model.load_state_dict(torch.load(path, map_location="cpu"))
+```
+
+Or download directly via CLI:
+
+```bash
+huggingface-cli download suyashkumar234/SurgAnon best_gated_lstm_weights.pt --local-dir checkpoints
+```
+
+---
+
 ## License
 
 Code released for research use. The surgical video dataset cannot be released due to patient privacy, consistent with field norms followed by OoBNet and IODA.
